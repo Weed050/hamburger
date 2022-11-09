@@ -1,0 +1,68 @@
+body {
+  background: rgb(4, 255, 4);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#hamb {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+}
+#hamb div {
+  background-color: black;
+  border-radius: 5px;
+  height: 10px;
+  width: 40px;
+  transition: 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+#hamb.open div:first-child {
+  left: -2px;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+#hamb.open div:last-child {
+  transform: rotateZ(-45deg);
+  left: -2px;
+  top: -6px;
+}
+#hamb.open div:nth-child(2) {
+  display: none;
+}
+.nav-menu {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  background-color: #2f2f2f;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#hamb {
+  display: none;
+}
+@media only screen and (max-width: 830px) {
+  #hamb {
+    display: flex;
+  }
+  .nav-item {
+    display: none;
+  }
+}
